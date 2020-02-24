@@ -1,3 +1,8 @@
+/* 
+  ErgoDashのカスタムkeymapです。
+  キーボードを接続した状態で、Repositoryのホームディレクトリで下記コマンドを実行してください。
+  make ergodash/rev1:t-mario-y:avrdude
+*/
 #include QMK_KEYBOARD_H
 
 
