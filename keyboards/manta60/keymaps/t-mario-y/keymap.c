@@ -33,43 +33,45 @@ enum custom_keycodes {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_BASE] = LAYOUT(
   //,---------------------------------------------------------------------.,---------------------------------------------------------------------.
-        KC_ESC,     KC_1,     KC_2,     KC_3,     KC_4,     KC_5,  KC_EQL,    KC_MINS,     KC_6,     KC_7,     KC_8,     KC_9,     KC_0,  KC_BSLS,
+        KC_ESC,     KC_1,     KC_2,     KC_3,     KC_4,     KC_5,  KC_LBRC,   KC_RBRC,     KC_6,     KC_7,     KC_8,     KC_9,     KC_0,   KC_GRV,
   //|---------+---------+---------+---------+---------+---------+---------|\---------+---------+---------+---------+---------+---------+---------|
-        KC_GRV,     KC_Q,     KC_W,     KC_E,     KC_R,     KC_T, KC_LBRC,    KC_RBRC,     KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,    KC_AT,
+        KC_TAB,     KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,  KC_MINS,    KC_EQL,     KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,  KC_BSPC,
   //|---------+---------+---------+---------+---------+---------+---------|\---------+---------+---------+---------+---------+---------+---------|
-        KC_TAB,     KC_A,     KC_S,     KC_D,     KC_F,     KC_G, KC_COMM,     KC_DOT,     KC_H,     KC_J,     KC_K,     KC_L,    KC_UP,  KC_SCLN,
+      KC_LCTRL,     KC_A,     KC_S,     KC_D,     KC_F,     KC_G,  KC_BSLS,   KC_SLSH,     KC_H,     KC_J,     KC_K,     KC_L,  KC_SCLN,  KC_QUOT,
   //|---------+---------+---------+---------+---------+---------+---------|\---------+---------+---------+---------+---------+---------+---------|
-       KC_LSFT,     KC_Z,     KC_X,     KC_C,     KC_V,  KC_SLSH,                          KC_B,     KC_N,     KC_M,  KC_LEFT,  KC_DOWN,  KC_RGHT,
+       KC_LSFT,     KC_Z,     KC_X,     KC_C,     KC_V,     KC_B,                          KC_N,     KC_M,  KC_COMM,   KC_DOT,  KC_DOWN,    KC_UP,
   //|---------+---------+---------+---------+---------+---------+---------|\---------+---------+---------+---------+---------+---------+---------|
-         LOWER,  XXXXXXX,  KC_LALT, KC_LCTRL,   KC_SPC,  KC_LGUI,  KC_ENT,    KC_BSPC,   KC_DEL,   KC_SPC, KC_RCTRL,  KC_RALT,  XXXXXXX,   RAISE
+       KC_LALT,  XXXXXXX,  KC_LGUI,    LOWER,   KC_SPC,  KC_PGUP, KC_LANG2,  KC_LANG1,KC_PGDOWN,   KC_ENT,    RAISE,  KC_RALT,  KC_LEFT,  KC_RGHT
   //`---------+----------/\-------+---------+---------+---------+---------/\---------+---------+---------+---------+---------/\--------+----------'
   ),
 
+//switch top row(R1) for function keys
   [_LOWER] = LAYOUT(
   //,---------------------------------------------------------------------.,---------------------------------------------------------------------.
-       _______,    KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5, XXXXXXX,    XXXXXXX,  XXXXXXX,  KC_MINS,   KC_EQL,  KC_JYEN,  KC_LBRC,  KC_RBRC,
+        KC_ESC,    KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5,   KC_F11,    KC_F12,    KC_F6,    KC_F7,    KC_F8,    KC_F9,   KC_F10,   KC_GRV,
   //|---------+---------+---------+---------+---------+---------+---------|\---------+---------+---------+---------+---------+---------+---------|
-       _______,    KC_F6,    KC_F7,    KC_F8,    KC_F9,   KC_F10, XXXXXXX,    XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  KC_SCLN,  KC_QUOT,  KC_BSLS,
+        KC_TAB,     KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,  KC_MINS,    KC_EQL,     KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,  KC_BSPC,
   //|---------+---------+---------+---------+---------+---------+---------|\---------+---------+---------+---------+---------+---------+---------|
-       _______,   KC_F11,   KC_F12,  XXXXXXX,  XXXXXXX,  XXXXXXX, XXXXXXX,    XXXXXXX,  XXXXXXX,  XXXXXXX,  KC_COMM,   KC_DOT,  KC_SLSH,  XXXXXXX,
+      KC_LCTRL,     KC_A,     KC_S,     KC_D,     KC_F,     KC_G,  KC_BSLS,   KC_SLSH,     KC_H,     KC_J,     KC_K,     KC_L,  KC_SCLN,  KC_QUOT,
   //|---------+---------+---------+---------+---------+---------+---------|\---------+---------+---------+---------+---------+---------+---------|
-       _______,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,                       XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,
+       KC_LSFT,     KC_Z,     KC_X,     KC_C,     KC_V,     KC_B,                          KC_N,     KC_M,  KC_COMM,   KC_DOT,  KC_DOWN,    KC_UP,
   //|---------+---------+---------+---------+---------+---------+---------|\---------+---------+---------+---------+---------+---------+---------|
-         LOWER,  XXXXXXX,  _______,  _______,  _______,  _______,  _______,   _______,  _______,  _______,  _______,  _______,  XXXXXXX,   RAISE
+       KC_LALT,  XXXXXXX,  KC_LGUI,    LOWER,   KC_SPC,  KC_PGUP, KC_LANG2,  KC_LANG1,KC_PGDOWN,   KC_ENT,    RAISE,  KC_RALT,  KC_LEFT,  KC_RGHT
   //`---------+----------/\-------+---------+---------+---------+---------/\---------+---------+---------+---------+---------/\--------+----------'
  ),
 
+//switch top row(R1) for function keys and use HJKL arrow
   [_RAISE] = LAYOUT(
   //,---------------------------------------------------------------------.,---------------------------------------------------------------------.
-       _______,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,   XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX, XXXXXXX,
+        KC_ESC,    KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5,   KC_F11,    KC_F12,    KC_F6,    KC_F7,    KC_F8,    KC_F9,   KC_F10,   KC_GRV,
   //|---------+---------+---------+---------+---------+---------+---------|\---------+---------+---------+---------+---------+---------+---------|
-       _______,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,   XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX, XXXXXXX,
+        KC_TAB,     KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,  KC_MINS,    KC_EQL,     KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,  KC_BSPC,
   //|---------+---------+---------+---------+---------+---------+---------|\---------+---------+---------+---------+---------+---------+---------|
-       _______,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,   XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX, XXXXXXX,
+      KC_LCTRL,     KC_A,     KC_S,     KC_D,     KC_F,     KC_G,  KC_BSLS,   KC_SLSH,  KC_LEFT,  KC_DOWN,    KC_UP, KC_RIGHT,  KC_SCLN,  KC_QUOT,
   //|---------+---------+---------+---------+---------+---------+---------|\---------+---------+---------+---------+---------+---------+---------|
-       _______,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,                       XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX, XXXXXXX,
+       KC_LSFT,     KC_Z,     KC_X,     KC_C,     KC_V,     KC_B,                          KC_N,     KC_M,  KC_COMM,   KC_DOT,  KC_DOWN,    KC_UP,
   //|---------+---------+---------+---------+---------+---------+---------|\---------+---------+---------+---------+---------+---------+---------|
-         LOWER,  XXXXXXX,  _______,  _______,  _______,  _______,  _______,   _______,  _______,  _______,  _______,  _______,  XXXXXXX,   RAISE
+       KC_LALT,  XXXXXXX,  KC_LGUI,    LOWER,   KC_SPC,  KC_PGUP, KC_LANG2,  KC_LANG1,KC_PGDOWN,   KC_ENT,    RAISE,  KC_RALT,  KC_LEFT,  KC_RGHT
   //`---------+----------/\-------+---------+---------+---------+---------/\---------+---------+---------+---------+---------/\--------+----------'
   ),
 
